@@ -34,7 +34,7 @@ export default function HeroSection({ story }) {
       variants={container}
       initial="hidden"
       animate="show"
-      className="bg-white rounded-lg shadow overflow-hidden"
+      className="bg-white dark:bg-gray-900 rounded-lg shadow dark:shadow-lg overflow-hidden"
     >
       <motion.div
         variants={item}
@@ -57,16 +57,16 @@ export default function HeroSection({ story }) {
 
         <motion.div
           variants={item}
-          className="flex flex-col justify-center space-y-4"
+          className="flex flex-col justify-center space-y-4 "
         >
           <a href={story.url} target="_blank" rel="noopener noreferrer">
-            <h2 className="text-2xl md:text-3xl font-bold leading-snug hover:underline">
+            <h2 className="text-2xl md:text-3xl font-bold leading-snug hover:underlinetext-black dark:text-white">
               {story.title}
             </h2>
           </a>
 
           {story.summary && (
-            <p className="text-gray-600 text-base md:text-lg line-clamp-3">
+            <p className="text-gray-600 dark:text-gray-300 text-base md:text-lg line-clamp-3">
               {story.summary}
             </p>
           )}
